@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu Bar</title>
+    <link rel="stylesheet" type="text/css" href="w3.css">
+</head>
+<body>
+    <div class="w3-container">
+        <img src="apkit.png" style="width: 100%;">
+    </div>
+    <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="artis('chaeunwoo')">Cha Eun Woo</button>
+        <button class="w3-bar-item w3-button" onclick="artis('minum')">Minum</button>
+        <button class="w3-bar-item w3-button" onclick="artis('gedung')">Gedung</button>
+        <button class="w3-bar-item w3-button" onclick="artis('mobil')">Mobil</button>
+    </div>
+    <div id="chaeunwoo" class="w3-container orang w3-center" style="display:none">
+        <h2>Cha Eun Woo</h2>
+        <img src="ChaEunwoo.jpg" style="width: 300px;">
+    </div>
+    <div id="minum" class="w3-container orang w3-center" style="display:none">
+        <h2>Minuman</h2>
+        <img src="minum.jpg" style="width: 300px;">
+    </div>
+    <div id="gedung" class="w3-container orang w3-center" style="display:none">
+        <h2>Gedung</h2>
+        <img src="gedung.jpg" style="width: 300px;">
+    </div>
+    <div id="mobil" class="w3-container orang w3-center" style="display:none">
+        <h2>Mobil</h2>
+        <img src="mobil.jpg" style="width: 300px;">
+    </div>
+<script>
+function artis(namaartis) {
+    var i;
+    var x = document.getElementsByClassName("orang");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none"; 
+        }
+    document.getElementById(namaartis).style.display = "block"; 
+}
+</script>
+</body>
+</html>
